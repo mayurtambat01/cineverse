@@ -26,7 +26,11 @@ A modern, cinematic movie ticket booking experience built with Next.js, TypeScri
 
 ## 🌐 Live Demo
 
-**Coming soon — Vercel deployment in progress.**
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Visit_Cineverse-DC2626?style=for-the-badge&logo=vercel&logoColor=white)](https://cineverse-mayur.vercel.app)
+
+**Live Website:** https://cineverse-mayur.vercel.app
+
+Experience Cineverse directly in your browser. No installation required.
 
 ---
 
@@ -203,7 +207,7 @@ movie discovery and ticket booking across devices.
 | HTML-to-Image | Digital ticket image generation   |
 | LocalStorage  | Client-side booking persistence   |
 | Git & GitHub  | Version control                   |
-| Vercel        | Planned production hosting        |
+| Vercel        | Production hosting                |
 
 ---
 
@@ -353,7 +357,7 @@ http://localhost:3000
 - [x] Developer profile page
 - [x] SEO and performance optimization
 - [x] Successful production build
-- [ ] Production deployment
+- [x] Production deployment
 
 ---
 

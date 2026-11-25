@@ -8,7 +8,7 @@ export default function Home() {
     <main className="min-h-screen bg-[#08080c] text-white">
       <section
         id="home"
-        className="relative flex min-h-[65svh] flex-col justify-center overflow-hidden bg-gradient-to-br from-[#34101c] via-[#11111b] to-black px-5 py-16 sm:min-h-[70svh] sm:px-8 sm:py-20 md:min-h-[75vh] md:px-16"
+        className="relative flex min-h-[calc(100svh-120px)] flex-col justify-center overflow-hidden bg-gradient-to-br from-[#34101c] via-[#11111b] to-black px-5 py-16 sm:px-8 sm:py-20 md:min-h-[calc(100svh-80px)] md:px-16"
       >
         <div className="pointer-events-none absolute -right-28 top-20 h-64 w-64 rounded-full bg-red-600/15 blur-[100px] md:h-96 md:w-96" />
 
