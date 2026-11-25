@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "./components/SmoothScroll";
@@ -25,6 +25,22 @@ export const metadata: Metadata = {
     "Discover movies, explore theatres, select showtimes, choose your seats and experience a cinematic movie ticket booking demo built with Next.js.",
 
   applicationName: "Cineverse",
+
+  manifest: "/manifest.webmanifest",
+
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "Cineverse",
+  },
+
+  formatDetection: {
+    telephone: false,
+  },
+
+  icons: {
+    apple: "/icons/icon-192.png",
+  },
 
   keywords: [
     "Cineverse",
@@ -68,6 +84,12 @@ export const metadata: Metadata = {
     description:
       "Explore movies and experience an interactive cinema booking platform.",
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#08080c",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
