@@ -24,3 +24,125 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* =====================================
+   CINEVERSE - PRINT MOVIE TICKET
+===================================== */
+
+@media print {
+  @page {
+    size: auto;
+    margin: 12mm;
+  }
+
+  html,
+  body {
+    background: white !important;
+    overflow: visible !important;
+    height: auto !important;
+  }
+
+  body * {
+    visibility: hidden !important;
+  }
+
+  #cineverse-ticket,
+  #cineverse-ticket * {
+    visibility: visible !important;
+  }
+
+  #cineverse-ticket {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    max-width: 600px !important;
+    color: white !important;
+
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+/* ========================================
+   CINEVERSE DEVELOPER PREMIERE
+======================================== */
+
+@keyframes premierePortraitReveal {
+  from {
+    opacity: 0.85;
+    transform: translateY(20px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes premiereTextReveal {
+  from {
+    opacity: 0.85;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes premiereGlow {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.premiere-portrait {
+  animation: premierePortraitReveal 0.8s ease-out both;
+}
+
+.premiere-content {
+  animation: premiereTextReveal 0.7s ease-out both;
+}
+
+.premiere-name {
+  animation: premiereTextReveal 0.6s ease-out both;
+}
+
+.premiere-glow {
+  animation: premiereGlow 4s ease-in-out infinite;
+}
+
+.premiere-enter-button {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.premiere-enter-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 35px rgba(220, 38, 38, 0.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .premiere-portrait,
+  .premiere-content,
+  .premiere-name,
+  .premiere-glow {
+    animation: none;
+  }
+
+  .premiere-enter-button {
+    transition: none;
+  }
+
+  .premiere-enter-button:hover {
+    transform: none;
+  }
+}
