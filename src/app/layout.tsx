@@ -16,6 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://cineverse-mayur.vercel.app"),
+
   title: {
     default: "Cineverse — Your Ultimate Cinema Experience",
     template: "%s | Cineverse",
@@ -70,19 +72,29 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
+    url: "https://cineverse-mayur.vercel.app",
     title: "Cineverse — Your Ultimate Cinema Experience",
     description:
       "A cinematic movie ticket booking demo featuring interactive seat selection, smooth animations and digital tickets.",
     siteName: "Cineverse",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Cineverse — Every Movie. An Experience.",
+      },
+    ],
   },
 
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Cineverse — Your Ultimate Cinema Experience",
     description:
       "Explore movies and experience an interactive cinema booking platform.",
+    images: ["/og-image.png"],
   },
 };
 
